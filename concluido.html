@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concluído</title>
+</head>
+<body>
+    <h1>Registro Concluído</h1>
+    <p>Obrigado por responder, <span id="nome-placeholder">nome-placeholder</span>!</p>
+
+    <script src="javascript.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nomePlaceholder = document.getElementById("nome-placeholder");
+
+            // Recupere o nome do localStorage
+            const nomeArmazenado = localStorage.getItem("nome");
+
+            // Verifique se o nome foi armazenado e exiba-o na página
+            if (nomeArmazenado) {
+                nomePlaceholder.textContent = nomeArmazenado;
+            }
+        });
+    </script>
+</body>
+</html>
